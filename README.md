@@ -32,19 +32,24 @@ Ce projet est une application web développée avec [Laravel](https://laravel.co
     npm install
 
 3. Copie le fichier d’environnement et configure-le :
+   ```sh
    cp .env.example .env
     # Modifie les variables selon ta configuration (DB, mail, etc.)
 
 4. Génère la clé d’application :
+   ```sh
     php artisan key:generate
 
 5. Lance les migrations et (optionnel) les seeders :
+   ```sh
     php artisan migrate
 
 6. Compile les assets :
+    ```sh
     npm run dev
 
 7. Démarre le serveur de développement :
+    ```sh
     php artisan serve
 
 Utilisation
