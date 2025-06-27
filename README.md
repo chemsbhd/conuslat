@@ -7,60 +7,51 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Consulat – Application de gestion administrative
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Ce projet est une application web développée avec [Laravel](https://laravel.com), permettant la gestion de données administratives, incluant l’insertion massive d’utilisateurs et une fonctionnalité de loterie pour modifier la nationalité d’un utilisateur.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Fonctionnalités
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Insertion de 100 utilisateurs fictifs dans la base de données via l’interface d’administration.
+- Fonction « Loterie » : sélection aléatoire d’une personne non marocaine et changement de sa nationalité.
+- Gestion des demandes de visa avec génération de PDF.
+- Interface d’administration avec messages de succès et d’erreur.
+- Authentification et gestion des utilisateurs.
+- Interface responsive avec [Tailwind CSS](https://tailwindcss.com).
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone le dépôt :
+   ```sh
+   git clone <url-du-repo>
+   cd consulat
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. Installe les dépendances PHP et JS :
+    composer install
+    npm install
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Copie le fichier d’environnement et configure-le :
+   cp .env.example .env
+    # Modifie les variables selon ta configuration (DB, mail, etc.)
 
-## Laravel Sponsors
+4. Génère la clé d’application :
+    php artisan key:generate
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+5. Lance les migrations et (optionnel) les seeders :
+    php artisan migrate
 
-### Premium Partners
+6. Compile les assets :
+    npm run dev
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+7. Démarre le serveur de développement :
+    php artisan serve
 
-## Contributing
+Utilisation
+Accède à /admin pour utiliser les fonctionnalités d’insertion et de loterie.
+Les messages de succès ou d’erreur s’affichent après chaque action.
+Les utilisateurs peuvent soumettre des demandes de visa via leur profil.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Licence
+Ce projet est sous licence MIT. ```
