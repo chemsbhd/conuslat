@@ -57,6 +57,3 @@ Accède à /admin pour utiliser les fonctionnalités d’insertion et de loterie
 Les messages de succès ou d’erreur s’affichent après chaque action.
 Les utilisateurs peuvent soumettre des demandes de visa via leur profil.
 
-
-Licence
-Ce projet est sous licence MIT. ```
